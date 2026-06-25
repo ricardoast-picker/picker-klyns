@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMSNN2P11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-VMMSNN2P11');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Picker × Farmacias Klyns — Post Intro Meeting</title>
+  <title>Picker × Farmacias Klyns — Discovery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
@@ -50,7 +58,6 @@
     .stat .val.g { color: var(--green-text); } .stat .val.b { color: var(--celeste); } .stat .val.a { color: var(--amber); } .stat .val.r { color: var(--red); }
     .stat .lbl { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
     .stat .desc { font-size: 10.5px; color: var(--sub); margin-top: 1px; }
-    .divider { width: 100%; height: 1px; background: var(--border); margin: 10px 0; }
     .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; padding: 4px 11px; border-radius: 20px; background: var(--green-dim); color: var(--green-text); border: 1px solid var(--green-mid); }
     .pill.b { background: var(--celeste-dim); color: var(--celeste); border-color: var(--celeste-mid); }
     .pill.a { background: var(--amber-bg); color: var(--amber); border-color: hsl(43 100% 45% / .3); }
@@ -67,266 +74,400 @@
     .q-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px; display: flex; gap: 11px; align-items: flex-start; }
     .q-num { min-width: 22px; height: 22px; border-radius: 50%; background: var(--celeste-dim); border: 1px solid var(--celeste-mid); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: var(--celeste); flex-shrink: 0; }
     .q-text { font-size: 12px; font-weight: 500; color: var(--sub); line-height: 1.5; }
-    .ratio-block { display: flex; align-items: center; gap: 10px; background: var(--red-bg); border: 1px solid hsl(346 100% 45% / .25); border-radius: 10px; padding: 12px 16px; }
-    .ratio-num { font-size: 2rem; font-weight: 900; color: var(--red); line-height: 1; }
-    .ratio-label { font-size: 11px; color: var(--sub); line-height: 1.4; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .tbl th { padding: 7px 10px; text-align: left; font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; border-bottom: 2px solid var(--border); }
+    .tbl td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .tbl tr:last-child td { border-bottom: none; }
+    .r { text-align: right; }
+    .g { color: var(--green-text); font-weight: 700; }
+    .a { color: var(--amber); font-weight: 700; }
+    .dim { color: var(--muted); }
   </style>
 </head>
 <body>
 <div id="deck">
 
-  <!-- SLIDE 1 — STATUS POST INTRO MEETING -->
-  <div class="slide active">
-    <div class="content" style="display:flex;gap:52px;align-items:center;">
-      <div style="flex:1.1;">
-        <div class="tag amber">Post Intro Meeting · 28 may · Demo pendiente</div>
-        <h1 style="margin-bottom:12px;">Farmacias Klyns</h1>
-        <p class="sub" style="max-width:480px;margin-bottom:10px;">Intro completada parcialmente (internet falló, continuó por teléfono). <strong>Pain confirmado: 15,000 transferencias para solo 5,000 pedidos</strong> — ratio de 3x. Sin tracking ni notificaciones con proveedor actual (Quality POST / JELP). Miguel interesado en ahorro + eficiencias.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
-          <span class="pill b">Intro → Demo</span>
-          <span class="pill">Miguel Llama · Gerente E-Commerce</span>
-          <span class="pill r">Reagendar demo ★</span>
-        </div>
-        <div class="card-amber" style="padding:10px 14px;">
-          <p style="font-size:11px;font-weight:700;color:hsl(43 100% 28%);margin-bottom:3px;">⚠ Constraint técnico crítico</p>
-          <p style="font-size:11px;color:var(--sub);line-height:1.5;">Usan <strong>VTEX</strong> como plataforma e-commerce. VTEX a veces solo permite integración con sus propios proveedores — <strong>Miguel quiere ver ejemplos de clientes Picker que usen VTEX</strong> antes de avanzar.</p>
-        </div>
+<!-- ═══ SLIDE 1 · STATUS ═══ -->
+<div class="slide active">
+  <div class="content" style="display:flex;gap:52px;align-items:center;">
+    <div style="flex:1.1;">
+      <div class="tag amber">Post Discovery · 2 jun · Demo 5 jun 10am</div>
+      <h1 style="margin-bottom:12px;">Farmacias Klyns</h1>
+      <p class="sub" style="max-width:500px;margin-bottom:12px;">Discovery completado el 2 jun con <strong>Miguel Llama</strong> (Gerente E-Commerce) y <strong>Antonio</strong> (Venta Remota / Operación). Costo del proveedor confirmado: <strong>$180,000 MXN/semana</strong>. Pain claro: quieren llegar más rápido y costar menos. Demo agendada para el viernes 5 jun.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
+        <span class="pill b">Discovery → Demo</span>
+        <span class="pill">Miguel Llama · Gerente E-Commerce</span>
+        <span class="pill">Antonio · Venta Remota</span>
+        <span class="pill a">Demo 5 jun 10am ★</span>
       </div>
-      <div style="flex:1;">
-        <div class="grid2" style="gap:10px;">
-          <div class="stat"><span class="val b">53</span><span class="lbl">Sucursales totales</span><span class="desc">9 Nodo + 44 satélite</span></div>
-          <div class="stat"><span class="val g">5,000</span><span class="lbl">Pedidos/mes</span><span class="desc">call center + web</span></div>
-          <div class="stat"><span class="val r">15,000</span><span class="lbl">Transferencias/mes</span><span class="desc">3x los pedidos ⚠</span></div>
-          <div class="stat"><span class="val a">$45 MXN</span><span class="lbl">Cobro al cliente</span><span class="desc">por envío a domicilio</span></div>
-        </div>
+      <div class="card-celeste" style="padding:10px 14px;">
+        <p style="font-size:11px;font-weight:700;color:var(--celeste);margin-bottom:3px;">Pain explícito de Miguel</p>
+        <p style="font-size:11px;color:var(--sub);line-height:1.5;">"Lo que si llegara yo a cambiar de algo, es con la intención de ser más eficiente en la entrega — <strong>llegar más rápido con el cliente y que nos cueste menos</strong>."</p>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <div class="grid2" style="gap:10px;">
+        <div class="stat"><span class="val b">50+</span><span class="lbl">Sucursales</span><span class="desc">9 Nodo + satélites · La Laguna</span></div>
+        <div class="stat"><span class="val g">6,500</span><span class="lbl">Pedidos/mes</span><span class="desc">CC + página web</span></div>
+        <div class="stat"><span class="val r">$180K</span><span class="lbl">MXN / semana</span><span class="desc">iguala fija al proveedor</span></div>
+        <div class="stat"><span class="val a">~1 hr</span><span class="lbl">SLA de entrega</span><span class="desc">objetivo actual</span></div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- SLIDE 2 — OPERACIÓN VALIDADA -->
-  <div class="slide">
-    <div class="content">
-      <div class="tag blue">Operación — validada en Intro Meeting + llamada</div>
-      <h2 style="margin-bottom:16px;">Cómo operan hoy</h2>
-      <div class="grid2" style="gap:14px;align-items:start;">
-        <div style="display:flex;flex-direction:column;gap:11px;">
-          <div class="card">
-            <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Modelo de tiendas — Hub & Spoke</p>
-            <div class="row-list">
-              <div class="row-item"><div class="row-dot g"></div><span><strong>9 tiendas Nodo</strong> — todos los envíos a domicilio salen desde aquí. Son los hubs centrales de despacho.</span></div>
-              <div class="row-item"><div class="row-dot a"></div><span><strong>44 tiendas satélite</strong> — pueden generar pedidos pero no despachan directamente. El repartidor pasa a recoger el producto antes de entregar.</span></div>
-              <div class="row-item"><div class="row-dot"></div><span>Ejemplo: repartidor asignado a "zona norte" sale de tienda Viñedos (Nodo), recoge en satélites cercanas, luego entrega al cliente.</span></div>
-              <div class="row-item"><div class="row-dot g"></div><span><strong>"Picangos"</strong> — retiro en tienda gratuito para el cliente. Tercer canal de entrega.</span></div>
-            </div>
-          </div>
-          <div class="card">
-            <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Proveedor de delivery — Quality POST</p>
-            <div class="row-list">
-              <div class="row-item"><div class="row-dot a"></div><span><strong>20 repartidores externos</strong> — del proveedor Quality POST</span></div>
-              <div class="row-item"><div class="row-dot r"></div><span><strong>Sin tracking en tiempo real</strong> — ni para Klyns ni para el cliente final</span></div>
-              <div class="row-item"><div class="row-dot r"></div><span><strong>Sin notificaciones</strong> — cliente no recibe ningún aviso de su pedido</span></div>
-              <div class="row-item"><div class="row-dot a"></div><span>Plataforma prestada por el proveedor: <strong>JELP</strong> — no es propiedad de Klyns</span></div>
-              <div class="row-item"><div class="row-dot a"></div><span>También usa <strong>"Envía"</strong> para envíos de ground delivery (paquetería / nacional)</span></div>
-            </div>
+<!-- ═══ SLIDE 2 · OPERACIÓN ═══ -->
+<div class="slide">
+  <div class="content">
+    <div class="tag blue">Operación — confirmada en Discovery · 2 jun 2026</div>
+    <h2 style="margin-bottom:14px;">Cómo operan hoy</h2>
+    <div class="grid2" style="gap:14px;align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:11px;">
+        <div class="card">
+          <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Proveedor de reparto — tercero externo</p>
+          <div class="row-list">
+            <div class="row-item"><div class="row-dot a"></div><span><strong>Iguala fija:</strong> $180,000 MXN/semana (~$720K/mes) — cubre 3 servicios.</span></div>
+            <div class="row-item"><div class="row-dot r"></div><span><strong>Servicio domicilio</strong> (75-80% de la factura): 18 motos de reparto que atienden pedidos + transferencias.</span></div>
+            <div class="row-item"><div class="row-dot a"></div><span><strong>Valija</strong> (~$30K/mes): 1 persona recorre las 50 tiendas diario haciendo transferencias entre sucursales.</span></div>
+            <div class="row-item"><div class="row-dot"></div><span><strong>Mensajería institucional</strong> (~$15K/mes): ventas a crédito con empresas y gobierno.</span></div>
+            <div class="row-item"><div class="row-dot r"></div><span>Plataforma GPS: <strong>GEDI</strong> — la presta el proveedor. Klyns no es dueño de sus datos.</span></div>
+            <div class="row-item"><div class="row-dot r"></div><span><strong>Sin tracking en tiempo real</strong> para el cliente final.</span></div>
           </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:11px;">
-          <div class="card">
-            <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Canales de venta</p>
-            <div style="display:flex;flex-direction:column;gap:8px;">
-              <div style="background:var(--green-dim);border:1px solid var(--green-mid);border-radius:8px;padding:10px 12px;">
-                <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
-                  <span style="font-size:11px;font-weight:700;color:var(--green-text);">📞 Call Center</span>
-                  <span style="font-size:11px;font-weight:800;color:var(--green-text);">Canal principal</span>
-                </div>
-                <p style="font-size:11px;color:var(--sub);">16 agentes · <strong>$5M MXN/mes</strong> · 5,000 clientes/mes</p>
-              </div>
-              <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;">
-                <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
-                  <span style="font-size:11px;font-weight:700;color:var(--sub);">🌐 Página web (VTEX)</span>
-                  <span style="font-size:11px;font-weight:600;color:var(--muted);">Secundario · en desarrollo</span>
-                </div>
-                <p style="font-size:11px;color:var(--sub);"><strong>$1.5M MXN/mes</strong> · 1,500 clientes/mes</p>
-              </div>
-              <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;">
-                <span style="font-size:11px;font-weight:700;color:var(--sub);">🏪 Picangos — retiro en tienda (gratis)</span>
-              </div>
-            </div>
-            <p style="font-size:10px;color:var(--muted);margin-top:8px;">El call center genera <strong>3.3x más revenue</strong> que la web. Canal principal con mayor volumen.</p>
-          </div>
-          <div class="card-celeste">
-            <p style="font-size:10px;font-weight:700;color:var(--celeste);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Stack tecnológico confirmado</p>
-            <div class="row-list">
-              <div class="row-item"><div class="row-dot"></div><span><strong>E-commerce:</strong> VTEX (constraint de integración — ver slide Pain)</span></div>
-              <div class="row-item"><div class="row-dot"></div><span><strong>Ops delivery:</strong> JELP (plataforma del proveedor Quality POST)</span></div>
-              <div class="row-item"><div class="row-dot"></div><span><strong>Ground delivery:</strong> "Envía" (paquetería nacional)</span></div>
-              <div class="row-item"><div class="row-dot"></div><span><strong>Call center:</strong> 16 agentes, plataforma no confirmada</span></div>
-            </div>
+        <div class="card">
+          <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Modelo de pedidos con transferencia</p>
+          <div class="row-list">
+            <div class="row-item"><div class="row-dot a"></div><span><strong>14-16% de los pedidos</strong> incluyen una transferencia: el repartidor pasa por otra sucursal a recoger el producto antes de ir al cliente final.</span></div>
+            <div class="row-item"><div class="row-dot"></div><span>Ejemplo: pedido en zona norte → repartidor sale del Nodo, recoge en sucursal Independencia, entrega al cliente.</span></div>
+            <div class="row-item"><div class="row-dot r"></div><span>Picker <strong>no puede hacer</strong> rutas multi-parada con cliente final — este 14-16% seguiría con el proveedor actual.</span></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 3 — PAIN CONFIRMADO -->
-  <div class="slide">
-    <div class="content">
-      <div class="tag red">Pain — confirmado en llamada post-reunión</div>
-      <h2 style="margin-bottom:16px;">El problema de las transferencias</h2>
-      <div class="grid2" style="gap:14px;align-items:start;">
-        <div style="display:flex;flex-direction:column;gap:11px;">
-
-          <div style="display:flex;align-items:stretch;gap:10px;">
-            <div class="ratio-block" style="flex:1;">
-              <div>
-                <div class="ratio-num">3x</div>
-                <p style="font-size:9px;color:var(--muted);font-weight:700;text-transform:uppercase;margin-top:2px;">transferencias</p>
-                <p style="font-size:9px;color:var(--muted);font-weight:700;text-transform:uppercase;">por pedido</p>
+      <div style="display:flex;flex-direction:column;gap:11px;">
+        <div class="card">
+          <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Canales y volúmenes</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="background:var(--green-dim);border:1px solid var(--green-mid);border-radius:8px;padding:10px 12px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+                <span style="font-size:11px;font-weight:700;color:var(--green-text);">📞 Call Center</span>
+                <span style="font-size:11px;font-weight:800;color:var(--green-text);">Canal principal</span>
               </div>
-              <div class="ratio-label">
-                <strong style="color:var(--text);">15,000 transferencias</strong><br/>para solo<br/><strong style="color:var(--text);">5,000 pedidos</strong><br/>al mes
+              <p style="font-size:11px;color:var(--sub);">15 personas (incl. web) · pedidos asignados por CRM vía código postal → rider automático</p>
+            </div>
+            <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+                <span style="font-size:11px;font-weight:700;color:var(--sub);">🌐 Página web</span>
+                <span style="font-size:11px;font-weight:600;color:var(--muted);">Secundario</span>
               </div>
+              <p style="font-size:11px;color:var(--sub);">Pedido cae automático, CC lo libera al nodo correspondiente</p>
             </div>
-          </div>
-
-          <div class="card-red">
-            <p style="font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;">Por qué pasa esto</p>
-            <div class="row-list">
-              <div class="row-item"><div class="row-dot r"></div><span>El modelo hub & spoke obliga al repartidor a pasar por múltiples tiendas satélite antes de llegar al cliente — por inventario distribuido.</span></div>
-              <div class="row-item"><div class="row-dot r"></div><span>Cada pedido puede requerir 1, 2 o más paradas de recolección antes de la entrega final.</span></div>
-              <div class="row-item"><div class="row-dot r"></div><span>20 repartidores absorbiendo 15,000 movimientos al mes = carga brutal de kilómetros y tiempo sin optimización de rutas.</span></div>
-            </div>
-          </div>
-
-          <div class="card-red">
-            <p style="font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;">Pain 2 — Sin visibilidad ni notificaciones</p>
-            <div class="row-list">
-              <div class="row-item"><div class="row-dot r"></div><span><strong>El cliente no sabe dónde está su pedido</strong> — Quality POST / JELP no ofrece tracking al cliente final.</span></div>
-              <div class="row-item"><div class="row-dot r"></div><span><strong>Klyns tampoco tiene visibilidad</strong> en tiempo real de sus 20 repartidores durante las rutas.</span></div>
-              <div class="row-item"><div class="row-dot r"></div><span>La plataforma JELP es propiedad del proveedor — Klyns no controla los datos ni la experiencia.</span></div>
+            <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;">
+              <span style="font-size:11px;font-weight:700;color:var(--sub);">🏪 "Picangos" — retiro en tienda gratuito</span>
             </div>
           </div>
         </div>
-
-        <div style="display:flex;flex-direction:column;gap:11px;">
-          <div class="card-amber">
-            <p style="font-size:10px;font-weight:700;color:hsl(43 100% 28%);text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;">⚠ Constraint técnico — VTEX</p>
-            <div class="row-list">
-              <div class="row-item"><div class="row-dot a"></div><span>VTEX en ocasiones <strong>solo permite integración con sus propios carriers</strong> (Uber Direct, DHL, FedEx, etc.) y bloquea proveedores externos.</span></div>
-              <div class="row-item"><div class="row-dot a"></div><span>Miguel quiere ver <strong>ejemplos de clientes Picker que usen VTEX</strong> antes de avanzar. Es una condición para continuar.</span></div>
-              <div class="row-item"><div class="row-dot a"></div><span>Esto debe resolverse antes de la demo — validar con el equipo técnico de Picker si hay casos VTEX activos.</span></div>
-            </div>
+        <div class="card-amber">
+          <p style="font-size:10px;font-weight:700;color:hsl(43 100% 28%);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Efectivo — dato crítico confirmado</p>
+          <div class="row-list">
+            <div class="row-item"><div class="row-dot a"></div><span>Sí cobran <strong>efectivo en entrega</strong> — Antonio lo confirmó como primer punto en la llamada.</span></div>
+            <div class="row-item"><div class="row-dot a"></div><span>En Picker MX: solo <strong>Uber Direct y Rapicargo</strong> soportan recaudo de efectivo.</span></div>
+            <div class="row-item"><div class="row-dot a"></div><span>Ticket alto (~$1,000–$2,000 MXN prom.) → algunos pedidos sobre el cap de $1,700 MXN del seguro Picker.</span></div>
           </div>
-
-          <div class="card-accent">
-            <p style="font-size:10px;font-weight:700;color:var(--green-text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;">Cómo Picker resuelve el pain</p>
-            <div class="row-list">
-              <div class="row-item"><div class="row-dot g"></div><span><strong>Flows engine:</strong> reglas automáticas para optimizar ruta de transferencias — asignar al repartidor más eficiente por zona y cantidad de paradas.</span></div>
-              <div class="row-item"><div class="row-dot g"></div><span><strong>Multi-pickup:</strong> la plataforma soporta recoger de múltiples tiendas en una misma ruta — exactamente el modelo de Klyns.</span></div>
-              <div class="row-item"><div class="row-dot g"></div><span><strong>Tracking en tiempo real</strong> — Klyns ve a sus 20 repartidores. El cliente recibe WhatsApp con su entrega.</span></div>
-              <div class="row-item"><div class="row-dot g"></div><span><strong>Ahorro y eficiencia</strong> — lo que Miguel pidió explícitamente. Cuantificar en la propuesta.</span></div>
+        </div>
+        <div class="card-celeste">
+          <p style="font-size:10px;font-weight:700;color:var(--celeste);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Tickets confirmados</p>
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;background:white;border-radius:8px;padding:8px 10px;text-align:center;border:1px solid var(--celeste-mid);">
+              <p style="font-size:15px;font-weight:800;color:var(--text);">~$600</p>
+              <p style="font-size:10px;color:var(--sub);">MXN · domicilio local</p>
             </div>
-          </div>
-
-          <div class="card" style="padding:12px 16px;">
-            <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Interés explícito de Miguel</p>
-            <div style="display:flex;gap:8px;">
-              <div style="flex:1;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:8px;padding:8px 10px;text-align:center;">
-                <p style="font-size:13px;font-weight:800;color:var(--green-text);">Ahorro</p>
-                <p style="font-size:10px;color:var(--sub);">en costos de operación</p>
-              </div>
-              <div style="flex:1;background:var(--celeste-dim);border:1px solid var(--celeste-mid);border-radius:8px;padding:8px 10px;text-align:center;">
-                <p style="font-size:13px;font-weight:800;color:var(--celeste);">Eficiencias</p>
-                <p style="font-size:10px;color:var(--sub);">en transferencias y rutas</p>
-              </div>
+            <div style="flex:1;background:white;border-radius:8px;padding:8px 10px;text-align:center;border:1px solid var(--celeste-mid);">
+              <p style="font-size:15px;font-weight:800;color:var(--text);">$1,000–1,700</p>
+              <p style="font-size:10px;color:var(--sub);">MXN · e-commerce nacional</p>
+            </div>
+            <div style="flex:1;background:white;border-radius:8px;padding:8px 10px;text-align:center;border:1px solid hsl(346 100% 45% / .25);">
+              <p style="font-size:15px;font-weight:800;color:var(--red);">30-40%</p>
+              <p style="font-size:10px;color:var(--sub);">pedidos sobre $2,000 MXN</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- SLIDE 4 — MEDDPICC ACTUALIZADO -->
-  <div class="slide">
-    <div class="content">
-      <div class="tag">MEDDPICC — Post Intro Meeting · 28 may 2026</div>
-      <h2 style="margin-bottom:14px;">Calificación actualizada</h2>
-      <div style="display:flex;flex-direction:column;gap:7px;width:100%;">
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--amber-bg);border:1px solid hsl(43 100% 45% / .3);border-radius:10px;">
-          <span class="med-badge med-mid">M</span><span style="font-size:11.5px;font-weight:700;">Metrics</span>
-          <span style="font-size:11px;color:var(--amber);font-weight:600;">Parcial ⚠</span>
-          <span style="font-size:11px;color:var(--sub);">5,000 pedidos/mes · 15,000 transferencias · $45 MXN cobro cliente · 20 repartidores · $5M call center + $1.5M web MXN/mes. <strong>Pendiente:</strong> costo actual del servicio de Quality POST.</span>
+<!-- ═══ SLIDE 3 · FINANCIERO ═══ -->
+<div class="slide">
+  <div class="content">
+    <div class="tag red">Ejercicio financiero — base confirmada en Discovery</div>
+    <h2 style="margin-bottom:14px;">Lo que pagan hoy al proveedor</h2>
+    <div class="grid2" style="gap:16px;align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--sub);">Desglose iguala — proveedor tercero</div>
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>Servicio</th>
+                <th class="r">/ semana</th>
+                <th class="r">/ mes</th>
+                <th>Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Domicilio + transferencias (18 motos)</td>
+                <td class="r a">~$135–144K</td>
+                <td class="r a">~$540–576K</td>
+                <td style="font-size:10px;color:var(--muted);">75-80% de la factura</td>
+              </tr>
+              <tr>
+                <td>Valija (50 tiendas/día)</td>
+                <td class="r dim">~$7.5K</td>
+                <td class="r dim">~$30K</td>
+                <td style="font-size:10px;color:var(--muted);">transferencias inter-sucursal</td>
+              </tr>
+              <tr>
+                <td>Mensajería institucional</td>
+                <td class="r dim">~$3.75K</td>
+                <td class="r dim">~$15K</td>
+                <td style="font-size:10px;color:var(--muted);">ventas gobierno/crédito</td>
+              </tr>
+              <tr style="background:hsl(43 100% 67%/.1);border-top:2px solid hsl(43 100% 45%/.3);">
+                <td style="font-weight:800;">TOTAL iguala</td>
+                <td class="r a" style="font-size:14px;">$180,000</td>
+                <td class="r a" style="font-size:14px;">~$720,000</td>
+                <td style="font-size:10px;color:var(--muted);">MXN · fijo sin importar volumen</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="padding:6px 14px;background:hsl(212 100% 97%);font-size:10px;color:var(--muted);">Confirmado por Miguel en llamada · precio fijo independiente del número de envíos</div>
         </div>
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--amber-bg);border:1px solid hsl(43 100% 45% / .3);border-radius:10px;">
-          <span class="med-badge med-mid">E</span><span style="font-size:11.5px;font-weight:700;">Economic Buyer</span>
-          <span style="font-size:11px;color:var(--amber);font-weight:600;">No confirmado ⚠</span>
-          <span style="font-size:11px;color:var(--sub);">Miguel es el operativo de e-commerce. <strong>Pendiente confirmar:</strong> ¿puede aprobar presupuesto o hay un Director/Gerente General encima?</span>
-        </div>
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
-          <span class="med-badge med-ok">D</span><span style="font-size:11.5px;font-weight:700;">Decision Criteria</span>
-          <span style="font-size:11px;color:var(--green-text);font-weight:600;">Confirmado ✓</span>
-          <span style="font-size:11px;color:var(--sub);">Miguel lo dijo explícitamente: <strong>(1) ahorro en costos</strong> y <strong>(2) mejora de eficiencias</strong>. Además: integración compatible con VTEX (condición técnica).</span>
-        </div>
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--red-bg);border:1px solid hsl(346 100% 45% / .25);border-radius:10px;">
-          <span class="med-badge med-no">D</span><span style="font-size:11.5px;font-weight:700;">Decision Process</span>
-          <span style="font-size:11px;color:var(--sub);">Desconocido</span>
-          <span style="font-size:11px;color:var(--red);font-weight:600;">La reunión se cortó antes de mapearlo. Preguntar en la demo: ¿quién más involucrado? ¿cuánto tarda el proceso de alta de proveedores?</span>
-        </div>
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--red-bg);border:1px solid hsl(346 100% 45% / .25);border-radius:10px;">
-          <span class="med-badge med-no">P</span><span style="font-size:11.5px;font-weight:700;">Paper Process</span>
-          <span style="font-size:11px;color:var(--sub);">Desconocido</span>
-          <span style="font-size:11px;color:var(--red);font-weight:600;">No explorado. Mapear en demo.</span>
-        </div>
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
-          <span class="med-badge med-ok">I</span><span style="font-size:11.5px;font-weight:700;">Identify Pain</span>
-          <span style="font-size:11px;color:var(--green-text);font-weight:600;">Fuerte ✓</span>
-          <span style="font-size:11px;color:var(--sub);">15,000 transferencias / 5,000 pedidos = ratio 3x. Sin tracking. Sin notificaciones. Plataforma del proveedor (no controlan sus datos). Lead inbound = ya sabían que necesitaban cambiar.</span>
-        </div>
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
-          <span class="med-badge med-ok">C</span><span style="font-size:11.5px;font-weight:700;">Champion</span>
-          <span style="font-size:11px;color:var(--green-text);font-weight:600;">Fuerte ✓</span>
-          <span style="font-size:11px;color:var(--sub);"><strong>Miguel Llama</strong> (opera la última milla, entiende el dolor). <strong>Ana Mendoza</strong> (facilitó el intro inbound). Dos internos alineados.</span>
-        </div>
-        <div style="display:grid;grid-template-columns:30px 130px 110px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--amber-bg);border:1px solid hsl(43 100% 45% / .3);border-radius:10px;">
-          <span class="med-badge med-mid">C</span><span style="font-size:11.5px;font-weight:700;">Competition</span>
-          <span style="font-size:11px;color:var(--amber);font-weight:600;">Identificado ⚠</span>
-          <span style="font-size:11px;color:var(--sub);">Status quo: <strong>Quality POST</strong> (proveedor externo, 20 repartidores) + plataforma <strong>JELP</strong> prestada. También usan <strong>Envía</strong> para ground delivery. Sin tracking ni notificaciones = debilidad clara.</span>
+        <div class="card-red" style="padding:14px 16px;">
+          <p style="font-size:10px;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px;">Por qué es un modelo ineficiente</p>
+          <div class="row-list">
+            <div class="row-item"><div class="row-dot r"></div><span>Pagan $720K/mes <strong>sin importar si hacen 4,000 o 8,000 pedidos</strong> — el proveedor no tiene incentivo de eficiencia.</span></div>
+            <div class="row-item"><div class="row-dot r"></div><span>18 motos aparcadas parte del tiempo — el proveedor cobra igual aunque los riders estén parados.</span></div>
+            <div class="row-item"><div class="row-dot r"></div><span>La plataforma GPS (GEDI) la paga el proveedor y Klyns <strong>no controla sus propios datos</strong>.</span></div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 5 — NEXT STEPS + DEMO PREP -->
-  <div class="slide">
-    <div class="content">
-      <div class="tag blue">Next Steps · Demo pendiente</div>
-      <h2 style="margin-bottom:16px;">Qué hacer antes y durante la demo</h2>
-      <div class="grid2" style="gap:14px;align-items:start;">
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;">Antes de la demo — pendientes críticos</p>
-          <div class="q-card"><div class="q-num">1</div><p class="q-text"><strong>Validar compatibilidad VTEX con Picker.</strong> Miguel lo puso como condición. Buscar 1–2 clientes actuales de Picker que usen VTEX y compartírselos. Si no hay, explicar el approach técnico alternativo.</p></div>
-          <div class="q-card"><div class="q-num">2</div><p class="q-text"><strong>Reagendar la demo.</strong> La llamada se cortó en 8 min — Miguel sabe que faltó la parte visual. Ricardo le ofreció por teléfono reagendar para mostrar la plataforma.</p></div>
-          <div class="q-card"><div class="q-num">3</div><p class="q-text"><strong>Preparar business case de eficiencia.</strong> 15,000 transferencias / 20 repartidores = ¿cuántos km y tiempo se pierden? Cuantificar el ahorro con rutas optimizadas por Picker.</p></div>
-          <div class="q-card"><div class="q-num">4</div><p class="q-text"><strong>Referencia clave:</strong> Farmacias YZA (México, mismo sector). Preparar caso de éxito concreto con números si es posible.</p></div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="card-accent" style="padding:14px 16px;">
+          <p style="font-size:10px;font-weight:800;color:var(--green-text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Dónde puede entrar Picker</p>
+          <div class="row-list">
+            <div class="row-item"><div class="row-dot g"></div><span>Pedidos <strong>sin transferencia</strong> (~84-86% del total ≈ 5,500 pedidos/mes) → Picker los orquesta con Uber, Rapicargo, Lalamove, MU, PBox.</span></div>
+            <div class="row-item"><div class="row-dot a"></div><span>Pedidos <strong>con transferencia</strong> (14-16% ≈ 910-1,040/mes) → siguen con el proveedor actual por limitación técnica.</span></div>
+            <div class="row-item"><div class="row-dot a"></div><span><strong>Efectivo</strong>: Uber Direct y Rapicargo lo soportan en México — resuelto para la mayoría de pedidos.</span></div>
+            <div class="row-item"><div class="row-dot g"></div><span>Reducir la iguala al proveedor actual: si solo le quedan los pedidos con transferencia, el costo baja proporcionalmente.</span></div>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;">En la demo — qué mostrar y preguntar</p>
-          <div class="q-card"><div class="q-num">1</div><p class="q-text"><strong>Multi-pickup en vivo:</strong> mostrar cómo el orquestador maneja una ruta con recolección en múltiples tiendas — exactamente el modelo Nodo + satélites de Klyns.</p></div>
-          <div class="q-card"><div class="q-num">2</div><p class="q-text"><strong>Tracking + WhatsApp brandeado:</strong> demostrar lo que hoy NO tienen — visibilidad en tiempo real para Klyns y notificación al cliente.</p></div>
-          <div class="q-card"><div class="q-num">3</div><p class="q-text"><strong>Preguntar:</strong> ¿cuánto les cobra Quality POST por envío? ¿Cuánto cuesta el servicio mensual? → base para el business case de ahorro.</p></div>
-          <div class="q-card"><div class="q-num">4</div><p class="q-text"><strong>Mapear proceso de decisión:</strong> ¿Miguel puede avanzar solo o hay alguien más que debe aprobar? ¿Quién es el Economic Buyer real?</p></div>
-          <div class="card-accent" style="margin-top:2px;">
-            <p style="font-size:10px;font-weight:700;color:var(--green-text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px;">Ventaja que mantener</p>
-            <p style="font-size:11.5px;color:var(--sub);line-height:1.5;">Lead <strong>inbound</strong> — ellos llegaron primero. El pain ya existe y Miguel lo reconoció. La reunión se cortó por técnica, no por falta de interés.</p>
+        <div class="card" style="padding:14px 16px;">
+          <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Estimado de ahorro potencial</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+            <div style="text-align:center;padding:10px;background:var(--red-bg);border-radius:8px;border:1px solid hsl(346 100% 45%/.25);">
+              <div style="font-size:10px;color:var(--muted);font-weight:700;margin-bottom:3px;">Costo actual domicilio</div>
+              <div style="font-size:18px;font-weight:900;color:var(--red);">~$555K</div>
+              <div style="font-size:10px;color:var(--sub);">MXN/mes</div>
+            </div>
+            <div style="text-align:center;padding:10px;background:var(--green-dim);border-radius:8px;border:1px solid var(--green-mid);">
+              <div style="font-size:10px;color:var(--muted);font-weight:700;margin-bottom:3px;">Con Picker (5,500 env.)</div>
+              <div style="font-size:18px;font-weight:900;color:var(--green-text);">~$500K</div>
+              <div style="font-size:10px;color:var(--sub);">MXN/mes · tarifa + fee</div>
+            </div>
+          </div>
+          <div style="background:var(--green-dim);border:1px solid var(--green-mid);border-radius:8px;padding:9px 12px;text-align:center;">
+            <div style="font-size:10px;color:var(--muted);font-weight:700;margin-bottom:2px;">Ahorro estimado / mes</div>
+            <div style="font-size:22px;font-weight:900;color:var(--green-text);">~$55K MXN</div>
+            <div style="font-size:10px;color:var(--sub);">Pendiente validar tarifario exacto y distancias · a confirmar en propuesta</div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- ═══ SLIDE 4 · MEDDPICC ═══ -->
+<div class="slide">
+  <div class="content">
+    <div class="tag">MEDDPICC — Post Discovery · 2 jun 2026</div>
+    <h2 style="margin-bottom:14px;">Calificación actualizada</h2>
+    <div style="display:flex;flex-direction:column;gap:7px;width:100%;">
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
+        <span class="med-badge med-ok">M</span><span style="font-size:11.5px;font-weight:700;">Metrics</span>
+        <span style="font-size:11px;color:var(--green-text);font-weight:600;">Confirmado ✓</span>
+        <span style="font-size:11px;color:var(--sub);">6,500 pedidos/mes · $180K MXN/semana al proveedor · 18 motos · 15 CC · SLA 1hr · 14-16% pedidos con transferencia. <strong>Pendiente:</strong> distancia promedio y % efectivo vs digital.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--red-bg);border:1px solid hsl(346 100% 45% / .25);border-radius:10px;">
+        <span class="med-badge med-no">E</span><span style="font-size:11.5px;font-weight:700;">Economic Buyer</span>
+        <span style="font-size:11px;color:var(--red);font-weight:600;">No confirmado ✗</span>
+        <span style="font-size:11px;color:var(--sub);">Miguel opera la última milla. No se exploró si puede aprobar un cambio de proveedor o si hay Director/Gerente General encima. <strong>Pregunta crítica para la demo.</strong></span>
+      </div>
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
+        <span class="med-badge med-ok">D</span><span style="font-size:11.5px;font-weight:700;">Decision Criteria</span>
+        <span style="font-size:11px;color:var(--green-text);font-weight:600;">Confirmado ✓</span>
+        <span style="font-size:11px;color:var(--sub);">Miguel lo dijo explícitamente: <strong>(1) llegar más rápido al cliente</strong> y <strong>(2) que cueste menos</strong>. Tracking en tiempo real como plus.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--amber-bg);border:1px solid hsl(43 100% 45% / .3);border-radius:10px;">
+        <span class="med-badge med-mid">D</span><span style="font-size:11.5px;font-weight:700;">Decision Process</span>
+        <span style="font-size:11px;color:var(--amber);font-weight:600;">Parcial ⚠</span>
+        <span style="font-size:11px;color:var(--sub);">Próximo paso claro: demo 5 jun → propuesta → decisión. Pero no se mapeó quién más involucrado ni cuánto tarda alta de proveedor nuevo en Klyns. Preguntar en demo.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--red-bg);border:1px solid hsl(346 100% 45% / .25);border-radius:10px;">
+        <span class="med-badge med-no">P</span><span style="font-size:11.5px;font-weight:700;">Paper Process</span>
+        <span style="font-size:11px;color:var(--red);font-weight:600;">Desconocido ✗</span>
+        <span style="font-size:11px;color:var(--sub);">No explorado. ¿El proveedor actual tiene contrato con cláusula de salida? ¿Cuánto tiempo tarda alta de nuevo proveedor? Mapear en demo.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
+        <span class="med-badge med-ok">I</span><span style="font-size:11.5px;font-weight:700;">Identify Pain</span>
+        <span style="font-size:11px;color:var(--green-text);font-weight:600;">Confirmado ✓</span>
+        <span style="font-size:11px;color:var(--sub);">Pain explícito de Miguel: quieren más rapidez y menos costo. Sin tracking para cliente. Plataforma GEDI no es de Klyns. Iguala fija = ineficiencia estructural. Lead inbound = ya querían cambiar.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
+        <span class="med-badge med-ok">C</span><span style="font-size:11.5px;font-weight:700;">Champion</span>
+        <span style="font-size:11px;color:var(--green-text);font-weight:600;">Sólido ✓</span>
+        <span style="font-size:11px;color:var(--sub);"><strong>Miguel Llama</strong> (opera delivery, entiende el dolor) + <strong>Antonio</strong> (venta remota / operación CC, participó activamente) + <strong>Ana Mendoza</strong> (facilitó el intro).</span>
+      </div>
+      <div style="display:grid;grid-template-columns:30px 140px 120px 1fr;gap:10px;align-items:center;padding:9px 12px;background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;">
+        <span class="med-badge med-ok">C</span><span style="font-size:11.5px;font-weight:700;">Competition</span>
+        <span style="font-size:11px;color:var(--green-text);font-weight:600;">Mapeado ✓</span>
+        <span style="font-size:11px;color:var(--sub);">Proveedor tercero unnamed · iguala fija · plataforma GEDI prestada · sin tracking · sin notificaciones. Debilidades claras vs Picker. Han visto otros proveedores antes (Rappi, etc.) y no cerraron.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SLIDE 5 · SPEECH DISCOVERY ═══ -->
+<div class="slide">
+  <div class="content">
+    <div class="tag amber">Discovery 2 jun 2026 · Speech por etapa</div>
+    <h2 style="margin-bottom:12px;">Preguntas del discovery — ¿qué se cubrió?</h2>
+    <div class="grid2" style="gap:12px;align-items:start;">
+
+      <!-- LEFT COLUMN -->
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <!-- ETAPA 1 -->
+        <div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--celeste);padding:0 2px;">Etapa 1 · Apertura y roles</div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:5px;">
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Roles de participantes (Miguel = E-Commerce, Antonio = Venta Remota)</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Agenda acordada: contexto breve → demo → propuesta</span></div>
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--celeste);padding:0 2px;margin-top:4px;">Etapa 2 · Situación y operación actual</div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:5px;">
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Volumen de pedidos/mes → 6,500 (CC + web)</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Costo y forma de pago al proveedor → iguala $180K/sem, 3 servicios</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Número de repartidores → 18 motos + valija + mensajería</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Plataforma GPS → GEDI, es del proveedor, Klyns no es dueño</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">SLA actual → ~1 hora objetivo desde pedido hasta entrega</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">% pedidos con transferencia → 14-16% requieren parada intermedia</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Ticket promedio → ~$600 local · $1K–1.7K e-commerce · 30-40% sobre $2K</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">¿Cobran efectivo? → sí (Uber Direct + Rapicargo lo resuelven)</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Flujo CC y asignación → CRM + código postal → GEDI → repartidor</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-weight:800;font-size:12px;flex-shrink:0;">✗</span><span style="font-size:11px;color:var(--sub);"><strong>Distancia promedio de entrega (km)</strong> — no se preguntó</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-weight:800;font-size:12px;flex-shrink:0;">✗</span><span style="font-size:11px;color:var(--sub);"><strong>% efectivo vs digital</strong> del total de 6,500 pedidos — no se cuantificó</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <!-- ETAPA 3 -->
+        <div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--celeste);padding:0 2px;">Etapa 3 · Pain e implicación</div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:5px;">
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Pain principal expresado → más rápido + menos costo (frase literal de Miguel)</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Sin tracking en tiempo real para el cliente final</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Incidencias frecuentes: caídas, robos, accidentes en moto</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--green-text);font-weight:800;font-size:12px;flex-shrink:0;">✓</span><span style="font-size:11px;color:var(--sub);">Iguala fija = pagan igual con 4K o 8K pedidos — proveedor sin incentivo</span></div>
+        </div>
+
+        <!-- ETAPA 4 -->
+        <div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--red);padding:0 2px;margin-top:4px;">Etapa 4 · Decisión y proceso · NO explorado</div>
+        <div style="background:var(--red-bg);border:1px solid hsl(346 100% 45%/.25);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:5px;">
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-weight:800;font-size:12px;flex-shrink:0;">✗</span><span style="font-size:11px;color:var(--sub);"><strong>¿Quién aprueba el cambio de proveedor?</strong> Miguel opera, ¿quién firma?</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-weight:800;font-size:12px;flex-shrink:0;">✗</span><span style="font-size:11px;color:var(--sub);"><strong>¿Cuánto tarda el proceso interno?</strong> Evaluación → decisión → alta proveedor</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--red);font-weight:800;font-size:12px;flex-shrink:0;">✗</span><span style="font-size:11px;color:var(--sub);"><strong>¿Hay contrato con el proveedor actual?</strong> Cláusula de salida, aviso mínimo</span></div>
+        </div>
+
+        <!-- ETAPA 5 -->
+        <div style="font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);padding:0 2px;margin-top:4px;">Etapa 5 · Integración técnica · Pendiente</div>
+        <div style="background:var(--amber-bg);border:1px solid hsl(43 100% 45%/.3);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:5px;">
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--amber);font-weight:800;font-size:12px;flex-shrink:0;">✗</span><span style="font-size:11px;color:var(--sub);"><strong>Plataforma e-commerce</strong> (¿VTEX? ¿Propia?) — no confirmada</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--amber);font-weight:800;font-size:12px;flex-shrink:0;">✗</span><span style="font-size:11px;color:var(--sub);"><strong>% pedidos CC vs web</strong> — ¿cuánto entra por cada canal?</span></div>
+        </div>
+
+        <!-- RESUMEN -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:4px;">
+          <div style="background:var(--green-dim);border:1px solid var(--green-mid);border-radius:10px;padding:10px;text-align:center;">
+            <div style="font-size:22px;font-weight:900;color:var(--green-text);">13</div>
+            <div style="font-size:10px;color:var(--sub);font-weight:600;">Cubiertas ✓</div>
+          </div>
+          <div style="background:var(--red-bg);border:1px solid hsl(346 100% 45%/.25);border-radius:10px;padding:10px;text-align:center;">
+            <div style="font-size:22px;font-weight:900;color:var(--red);">5</div>
+            <div style="font-size:10px;color:var(--sub);font-weight:600;">Críticas ✗</div>
+          </div>
+          <div style="background:var(--amber-bg);border:1px solid hsl(43 100% 45%/.3);border-radius:10px;padding:10px;text-align:center;">
+            <div style="font-size:22px;font-weight:900;color:var(--amber);">2</div>
+            <div style="font-size:10px;color:var(--sub);font-weight:600;">Técnicas ⚠</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SLIDE 6 · DEMO + GAPS ═══ -->
+<div class="slide">
+  <div class="content">
+    <div class="tag blue">Demo 5 jun · 10am · 30 min — Preguntas pendientes</div>
+    <h2 style="margin-bottom:14px;">Qué mostrar · qué confirmar · qué falta</h2>
+    <div class="grid2" style="gap:14px;align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <p style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;">En la demo — qué mostrar</p>
+        <div class="q-card"><div class="q-num">1</div><p class="q-text"><strong>Envío en tiempo real con efectivo:</strong> mostrar cómo Uber Direct / Rapicargo recaudan efectivo — fue la primera preocupación de Antonio.</p></div>
+        <div class="q-card"><div class="q-num">2</div><p class="q-text"><strong>Tracking en tiempo real + WhatsApp brandeado:</strong> lo que hoy NO tienen con GEDI. El cliente ve su pedido, Klyns ve a sus riders.</p></div>
+        <div class="q-card"><div class="q-num">3</div><p class="q-text"><strong>Flows con reglas por tipo de pedido:</strong> tickets altos (+$2,000) → asignar al proveedor actual (que lo cubre). Tickets normales → Picker. Mostrar la configuración.</p></div>
+        <div class="q-card"><div class="q-num">4</div><p class="q-text"><strong>Dashboard unificado:</strong> ver los 18 motos del proveedor + carriers de Picker en un solo panel.</p></div>
+        <div class="card-accent" style="margin-top:2px;padding:12px 14px;">
+          <p style="font-size:10px;font-weight:700;color:var(--green-text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Referencia clave a usar</p>
+          <p style="font-size:11.5px;color:var(--sub);line-height:1.5;">Farmacias ISA (FEMSA) — misma industria, México. Modelo similar de iguala fija reemplazada por orquestación. Llevar caso de uso si hay datos.</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <p style="font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.08em;">Puntos que faltan por confirmar</p>
+        <div class="q-card" style="border-color:hsl(346 100% 45%/.3);">
+          <div class="q-num" style="background:var(--red-bg);border-color:hsl(346 100% 45%/.3);color:var(--red);">1</div>
+          <p class="q-text"><strong>¿Quién es el Economic Buyer?</strong> ¿Miguel puede aprobar el cambio de proveedor solo o necesita escalar a dirección? Pregunta crítica.</p>
+        </div>
+        <div class="q-card" style="border-color:hsl(346 100% 45%/.3);">
+          <div class="q-num" style="background:var(--red-bg);border-color:hsl(346 100% 45%/.3);color:var(--red);">2</div>
+          <p class="q-text"><strong>% efectivo vs digital</strong> en el total de 6,500 pedidos. Clave para dimensionar la restricción de Uber/Rapicargo.</p>
+        </div>
+        <div class="q-card" style="border-color:hsl(346 100% 45%/.3);">
+          <div class="q-num" style="background:var(--red-bg);border-color:hsl(346 100% 45%/.3);color:var(--red);">3</div>
+          <p class="q-text"><strong>Distancia promedio de entrega</strong> (km). Necesario para armar el tarifario exacto y el ejercicio financiero comparativo.</p>
+        </div>
+        <div class="q-card" style="border-color:hsl(43 100% 45%/.4);">
+          <div class="q-num" style="background:var(--amber-bg);border-color:hsl(43 100% 45%/.4);color:var(--amber);">4</div>
+          <p class="q-text"><strong>¿El proveedor actual tiene contrato con cláusula de salida?</strong> ¿Cuánto tiempo de aviso requieren? Impacta el timeline de arranque.</p>
+        </div>
+        <div class="q-card" style="border-color:hsl(43 100% 45%/.4);">
+          <div class="q-num" style="background:var(--amber-bg);border-color:hsl(43 100% 45%/.4);color:var(--amber);">5</div>
+          <p class="q-text"><strong>Plataforma de e-commerce</strong> (¿VTEX?). No se confirmó en esta llamada. Relevante para la integración API.</p>
+        </div>
+        <div class="q-card" style="border-color:hsl(43 100% 45%/.4);">
+          <div class="q-num" style="background:var(--amber-bg);border-color:hsl(43 100% 45%/.4);color:var(--amber);">6</div>
+          <p class="q-text"><strong>% pedidos por canal</strong> (CC vs web) y si el desglose del volumen varía por día/semana. Ayuda a dimensionar picos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 
-<div id="slide-num">1 / 5</div>
+<div id="slide-num">1 / 6</div>
 <div id="nav">
   <button class="nav-btn" id="prev" onclick="move(-1)" disabled>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
@@ -340,7 +481,7 @@
   const slides = document.querySelectorAll('.slide'), total = slides.length; let cur = 0;
   const iw = document.getElementById('indicators');
   slides.forEach((_,i) => { const d = document.createElement('div'); d.className='dot'+(i===0?' on':''); d.onclick=()=>go(i); iw.appendChild(d); });
-  function go(n) { slides[cur].classList.remove('active'); slides[cur].classList.add('exit'); setTimeout(()=>slides[cur].classList.remove('exit'),420); cur=n; slides[cur].classList.add('active'); document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur)); document.getElementById('slide-num').textContent=`${cur+1} / ${total}`; document.getElementById('prev').disabled=cur===0; document.getElementById('next').disabled=cur===total-1; }
+  function go(n) { slides[cur].classList.remove('active'); slides[cur].classList.add('exit'); setTimeout(()=>slides[cur].classList.remove('exit'),420); cur=n; slides[cur].classList.add('active'); document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur)); document.getElementById('slide-num').textContent=`${cur+1} / 6`; document.getElementById('prev').disabled=cur===0; document.getElementById('next').disabled=cur===total-1; }
   function move(d) { if(cur+d>=0&&cur+d<total) go(cur+d); }
   document.addEventListener('keydown',e=>{ if(e.key==='ArrowRight'||e.key==='ArrowDown') move(1); if(e.key==='ArrowLeft'||e.key==='ArrowUp') move(-1); });
 </script>
